@@ -1,15 +1,15 @@
 var express = require ('express');
-var path = require ('path')
+var path = require ('path');
 
 var app = express();
 
 
-app.use(express.static((path.join(__dirname,'dist','bankingApp')))) 
+app.use(express.static((path.join(__dirname,'dist','bankingApp'))));
 
 // app.use('/home',home)
 
 app.get ('/',(req,res)=>{
-res.sendFile(path.join(__dirname,'dist','bankingApp','index.html'))
+res.sendFile(path.join(__dirname,'dist','bankingApp','index.html'));
 })
 
 
