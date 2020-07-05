@@ -1,140 +1,139 @@
 <div [ngSwitch]="displayForm">
-    <!-- registration page -->
-  
-    <div class="flex-container" *ngSwitchCase="'Register'">
-      <form class="text-center border border-light p-5" action="#!">
-        <p class="h4 mb-4">Create an Account</p>
-  
-        <div class="form-row mb-4">
-          <div class="col">
-            <input
-              type="text"
-              id="defaultRegisterFormFirstName"
-              class="form-control"
-              placeholder="First name"
-            />
-          </div>
-          <div class="col">
-            <input
-              type="text"
-              id="defaultRegisterFormLastName"
-              class="form-control"
-              placeholder="Last name"
-            />
-          </div>
-        </div>
-  
-        <input
-          type="email"
-          id="defaultRegisterFormEmail"
-          class="form-control mb-4"
-          placeholder="E-mail"
-        />
-  
-        <input
-          type="password"
-          id="defaultRegisterFormPassword"
-          class="form-control"
-          placeholder="Password"
-          aria-describedby="defaultRegisterFormPasswordHelpBlock"
-        />
-        <small
-          id="defaultRegisterFormPasswordHelpBlock"
-          class="form-text text-muted mb-4"
-        >
-          At least 8 characters and 1 digit
-        </small>
-  
-        <input
-          type="text"
-          id="defaultRegisterPhonePassword"
-          class="form-control"
-          placeholder="Phone number"
-          aria-describedby="defaultRegisterFormPhoneHelpBlock"
-        />
-        <small
-          id="defaultRegisterFormPhoneHelpBlock"
-          class="form-text text-muted mb-4"
-        >
-          Optional - for two step authentication
-        </small>
-  
-        <div class="custom-control custom-checkbox">
+  <!-- registration page -->
+
+  <div class="flex-container" *ngSwitchCase="'Register'">
+    <form class="text-center border border-light p-5" >
+      <p class="h4 mb-4">Create an Account</p>
+
+      <div class="form-row mb-4">
+        <div class="col">
           <input
-            type="checkbox"
-            class="custom-control-input"
-            id="defaultRegisterFormNewsletter"
+            type="text"
+            id="defaultRegisterFormFirstName"
+            class="form-control"
+            placeholder="First name"
           />
-          <label class="custom-control-label" for="defaultRegisterFormNewsletter"
-            >Subscribe to our newsletter</label
-          >
         </div>
-  
-        <button class="btn btn-info my-4 btn-block" type="submit">
-          Register
-        </button>
-  
-        <p>
-          Already have an account?
-          <span class="fake-link" (click)="displayForm = 'login'">Sign in</span>
-        </p>
-  
-        <hr />
-  
-        <p>
-          By clicking <em>Register</em> you agree to our
-          <a href="" target="_blank">terms of service</a>
-        </p>
-      </form>
-    </div>
-  
-    <!-- Login page -->
-  
-    <div class="flex-container" *ngSwitchCase="'login'">
-      <form class="text-center border border-light p-5" action="#!">
-        <p class="h4 mb-4">Sign In</p>
-  
+        <div class="col">
+          <input
+            type="text"
+            id="defaultRegisterFormLastName"
+            class="form-control"
+            placeholder="Last name"
+          />
+        </div>
+      </div>
+
+      <input
+        type="email"
+        id="defaultRegisterFormEmail"
+        class="form-control mb-4"
+        placeholder="E-mail"
+      />
+
+      <input
+        type="password"
+        id="defaultRegisterFormPassword"
+        class="form-control"
+        placeholder="Password"
+        aria-describedby="defaultRegisterFormPasswordHelpBlock"
+      />
+      <small
+        id="defaultRegisterFormPasswordHelpBlock"
+        class="form-text text-muted mb-4"
+      >
+        At least 8 characters and 1 digit
+      </small>
+
+      <input
+        type="text"
+        id="defaultRegisterPhonePassword"
+        class="form-control"
+        placeholder="Phone number"
+        aria-describedby="defaultRegisterFormPhoneHelpBlock"
+      />
+      <small
+        id="defaultRegisterFormPhoneHelpBlock"
+        class="form-text text-muted mb-4"
+      >
+        Optional - for two step authentication
+      </small>
+
+      <div class="custom-control custom-checkbox">
         <input
-          type="email"
-          id="defaultRegisterFormEmail"
-          class="form-control mb-4"
-          placeholder="E-mail"
+          type="checkbox"
+          class="custom-control-input"
+          id="defaultRegisterFormNewsletter"
         />
-  
-        <input
-          type="password"
-          id="defaultRegisterFormPassword"
-          class="form-control"
-          placeholder="Password"
-          aria-describedby="defaultRegisterFormPasswordHelpBlock"
-        />
-        <small
-          id="defaultRegisterFormPasswordHelpBlock"
-          class="form-text text-muted mb-4"
+        <label class="custom-control-label" for="defaultRegisterFormNewsletter"
+          >Subscribe to our newsletter</label
         >
-          At least 8 characters and 1 digit
-        </small>
-  
-        <button
-          class="btn btn-info my-4 btn-block"
-          type="submit"
-          (click)="authenticate()"
-        >
-          Sign In
-        </button>
-  
-        <p>
-          Don't have an account?
-          <a class="fake-link" (click)="displayForm = 'Register'">Register</a>
-        </p>
-  
-        <hr />
-  
-        <p>
-          View our <em>policy</em> on how we protect your data.
-          <a href="" target="_blank">Data Policy</a>
-        </p>
-      </form>
-    </div>
+      </div>
+
+      <button class="btn btn-info my-4 btn-block" type="submit">
+        Register
+      </button>
+
+      <p>
+        Already have an account?
+        <span class="fake-link" (click)="displayForm = 'login'">Sign in</span>
+      </p>
+
+      <hr />
+
+      <p>
+        By clicking <em>Register</em> you agree to our
+        <a href="" target="_blank">terms of service</a>
+      </p>
+    </form>
   </div>
-  
+
+  <!-- Login page -->
+
+  <div class="flex-container" *ngSwitchCase="'login'">
+    <form class="text-center border border-light p-5" onsubmit="return false">
+      <p class="h4 mb-4">Sign In</p>
+
+      <input
+        type="email"
+        id="defaultRegisterFormEmail"
+        class="form-control mb-4"
+        placeholder="E-mail"
+      />
+
+      <input
+        type="password"
+        id="defaultRegisterFormPassword"
+        class="form-control"
+        placeholder="Password"
+        aria-describedby="defaultRegisterFormPasswordHelpBlock"
+      />
+      <small
+        id="defaultRegisterFormPasswordHelpBlock"
+        class="form-text text-muted mb-4"
+      >
+        At least 8 characters and 1 digit
+      </small>
+
+      <button
+        class="btn btn-info my-4 btn-block"
+        type="submit"
+        (click)="authenticate()"
+      >
+        Sign In
+      </button>
+
+      <p>
+        Don't have an account?
+        <a class="fake-link" (click)="displayForm = 'Register'">Register</a>
+      </p>
+
+      <hr />
+
+      <p>
+        View our <em>policy</em> on how we protect your data.
+        <a href="" target="_blank">Data Policy</a>
+      </p>
+    </form>
+  </div>
+</div>

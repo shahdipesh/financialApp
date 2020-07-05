@@ -18,4 +18,4 @@ res.sendFile(path.join(__dirname,'dist','bankingApp','index.html'));
 
 
 
-app.listen (2000,()=>{console.log("node server running on port 3000")})
+app.listen (3000,()=>{console.log("node server running on port 3000")})

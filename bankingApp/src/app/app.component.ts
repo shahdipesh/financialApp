@@ -1,6 +1,4 @@
-import { UserServiceService } from './user-service.service';
 import { Component,OnInit } from '@angular/core';
-import 'rxjs/add/operator/map';
 
 import * as $ from 'jquery';
 
@@ -13,14 +11,10 @@ export class AppComponent implements OnInit {
 
 user:any=[];
 
-constructor (private userService:UserServiceService) {}
+constructor () {}
 
 
   ngOnInit() {
-this.userService.getUser().map(user=>{
-this.user=user;
-})
-
     $(document).ready(function () {
       $('#menu-toggle').click(function (e) {
         e.preventDefault();

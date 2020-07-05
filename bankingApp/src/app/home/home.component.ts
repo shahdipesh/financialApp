@@ -1,3 +1,4 @@
+import { UserServiceService } from './../user-service.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -10,13 +11,16 @@ export class HomeComponent implements OnInit {
   displayForm="login";
   userNavigation="false"
 
-  authenticate=function(){
-    alert("hello")
+
+  constructor(private userService:UserServiceService) { }
+
+  authenticate(){
+    console.log ("home ts");
+    this.userService.getUser();
   }
 
-  constructor() { }
-
   ngOnInit(): void {
+    console.log ("service called");
   }
 
 }
