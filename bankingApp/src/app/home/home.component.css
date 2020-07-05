@@ -1,0 +1,18 @@
+.flex-container {
+    display: flex;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 220px;
+  }
+
+ form {
+        background-color: rgba(235, 235, 235, 0.705);
+ }
+
+
+ .fake-link {
+       color: rgb(64, 64, 192);
+       text-decoration: underline;
+       cursor: pointer;
+   }
